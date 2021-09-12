@@ -10,4 +10,10 @@ def portfolio(redirect):
     return render(redirect,'portfolio-details.html')
 def graphic(redirect):
     return render(redirect,'graphic.html')
+def webdev(redirect):
+    return render(redirect,'webdev.html')
+def seo(redirect):
+    return render(redirect,'seo.html')
+def digitalmarketing(redirect):
+    return render(redirect,'digitalmarketing.html')
 
