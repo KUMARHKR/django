@@ -3,7 +3,10 @@ from django.shortcuts import redirect, render,HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html')
+    params ={'webname': 'Ziddi Tech',}
+    return render(request,'index.html',params)
+    
+
 def inpage(redirect):
     return render(redirect,'inner-page.html')
 def portfolio(redirect):
@@ -16,4 +19,3 @@ def seo(redirect):
     return render(redirect,'seo.html')
 def digitalmarketing(redirect):
     return render(redirect,'digitalmarketing.html')
-
