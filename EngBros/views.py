@@ -1,9 +1,14 @@
 from django.shortcuts import redirect, render,HttpResponse
-
+from .models import Products
+from math import ceil
 # Create your views here.
 
 def index(request):
-    params ={'webname': 'Ziddi Tech',}
+    products = Products.objects.all
+    # n = len(products)
+    # nSlides = n//4 + ceil((n/4)-(n//4))
+    # next lind add ( 'no_of_slides':nSlides , 'range':range (nSlides) ,)
+    params ={'webname': 'Ziddi Tech', 'product': products , }
     return render(request,'index.html',params)
     
 
