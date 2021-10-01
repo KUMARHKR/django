@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$n6u@c)%5xo51k)h0hn-ozpe=^ycuz38c60_(#ba1%gyrp(*n@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['techycreation.com','www.techycreation.com', '127.0.0.1' ]
 
 
 # Application definition
@@ -120,6 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT ='/home/tanipyfq/public_html/static'
+
+MEDIA_ROOT =('home/tanipyfq/public_html/media')
 MEDIA_ROOT =os.path.join(BASE_DIR,'media')
 MEDIA_URL ='/media/'
 
