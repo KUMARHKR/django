@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e06e2b52-43ac-4c34-8c25-069092852e79/resourceGroups/appsvc_linux_centralus_premium/providers/Microsoft.Web/sites/azure-techycreation",
+    "appService.deploySubpath": "."
+}
