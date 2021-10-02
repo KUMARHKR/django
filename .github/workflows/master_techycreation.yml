@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'techycreation'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ABE00DC70798466B829C96F09E7A8249 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9A84FB7C2E19434E9F2AB5C05E10AE2E }}
