@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$n6u@c)%5xo51k)h0hn-ozpe=^ycuz38c60_(#ba1%gyrp(*n@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['techycreation.com','www.techycreation.com', '20.51.246.127', '127.0.0.1','techycreation.azurewebsites.net']
 
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['techycreation.com','www.techycreation.com', '20.51.246.127', '
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoice.runserver_nostatic',
     'EngBros.apps.EngbrosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +43,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,6 +134,8 @@ MEDIA_URL ='/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
  ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
